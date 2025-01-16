@@ -30,11 +30,11 @@ The mean loss penalizes the difference between the mean of an estimated spine ag
 
 We incorporated this mean-variance loss into the convolutional neural network model architecture. The softmax loss and mean-variance loss were combined as the supervision signal. The final loss of the spine age prediction model is represented as:
 $$L_{final} = L_c + \lambda_1 L_m + \lambda_2 L_v$$
-where \(\lambda_1\) and \(\lambda_2\) are hyperparameters balancing the influence of individual sub-losses. Initially, \(\lambda_1\) and \(\lambda_2\) were set to 0.2 and 0.05, respectively.
+where $\(\lambda_1\)$ and $\(\lambda_2\)$ are hyperparameters balancing the influence of individual sub-losses. Initially, $\(\lambda_1\)$ and $\(\lambda_2\)$ were set to 0.2 and 0.05, respectively.
 
 During inference, the age of a test image is estimated as:
 $$y_p = r\left(\sum_{i=40}^{K} i \cdot p_i\right)$$
-where \(p_i\) (\(i \in \{40, 41, 42, \dots, K\}\)) is the output of the softmax layer in the network, and \(r(\cdot)\) is a rounding function.
+where $$\(p_i\) (\(i \in \{40, 41, 42, \dots, K\}\))$$ is the output of the softmax layer in the network, and $$\(r(\cdot)\)$$ is a rounding function.
 
 ## Age-Level Bias Correction Between Modalities
 
