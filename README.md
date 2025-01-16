@@ -1,4 +1,4 @@
-# VERTE-X-Aging
+# VERTE-X Spine Aging
 Code for "Spine age estimation using deep learning in lateral spine radiographs and DXA VFA to predict incident fracture and mortality." 
 
 ## Estimate Spine Age
